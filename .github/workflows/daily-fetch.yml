@@ -2,7 +2,7 @@ name: Daily Image Fetch
 
 on:
   schedule:
-    - cron: '41 5 * * *'  # run daily at 03:00 UTC
+    - cron: '44 5 * * *'  # run daily at 03:00 UTC
   workflow_dispatch:
 
 jobs:
