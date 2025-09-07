@@ -25,7 +25,14 @@ images_dir.mkdir(exist_ok=True)
 index_file = Path("index.json")
 if index_file.exists():
     with open(index_file) as f:
-        index_data = json.load(f)
+        try:
+            index_data = json.load(f)
+            if not isinstance(index_data, dict):
+                print("index.json is not a dict, resetting it.")
+                index_data = {}
+        except json.JSONDecodeError:
+            print("index.json is invalid, resetting it.")
+            index_data = {}
 else:
     index_data = {}
 
