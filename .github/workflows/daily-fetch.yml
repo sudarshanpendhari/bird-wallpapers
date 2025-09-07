@@ -39,7 +39,7 @@ jobs:
           git add images index.json || true
           if ! git diff --cached --quiet; then
             git commit -m "chore: add daily wallpapers (auto)"
-            git push https://x-access-token:${PAT_TOKEN}@github.com/sudarshanpendhari/bird-wallpapers.git HEAD:main
+            git push https://x-access-token:${PAT_TOKEN}@github.com/sudarshanpendhari/bird-wallpapers.git HEAD:master
           else
             echo "No changes to commit"
           fi
