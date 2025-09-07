@@ -2,7 +2,7 @@ name: Daily Image Fetch
 
 on:
   schedule:
-    - cron: '44 5 * * *'   # run daily at 5:44 UTC
+    - cron: '44 5 * * *'   # run daily at 05:44 UTC
   workflow_dispatch:         # allows manual trigger
 
 jobs:
@@ -42,3 +42,4 @@ jobs:
             git push
           else
             echo "No changes to commit"
+          fi
