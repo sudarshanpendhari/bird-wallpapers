@@ -2,7 +2,7 @@ name: Daily Image Fetch
 
 on:
   schedule:
-    - cron: '0 3 * * *'   # run daily at 03:00 UTC
+    - cron: '41 5 * * *'  # run daily at 03:00 UTC
   workflow_dispatch:
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
 
       - name: Run image fetcher
         env:
-          UNSPLASH_KEY: ${{ secrets.UNSPLASH_KEY }}
+        #   UNSPLASH_KEY: ${{ secrets.UNSPLASH_KEY }}
           PEXELS_KEY: ${{ secrets.PEXELS_KEY }}
           PIXABAY_KEY: ${{ secrets.PIXABAY_KEY }}
           GITHUB_ACTOR: ${{ github.actor }}
